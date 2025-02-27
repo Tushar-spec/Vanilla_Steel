@@ -1,78 +1,61 @@
-# Vanilla_Steel
-Task 1
-# Inventory Data Processing
+# Project Title
 
 ## Overview
+This repository contains a Jupyter Notebook named `Task_1 (1).ipynb`. This notebook focuses on data extraction, cleaning, and analysis using Python and Pandas. It primarily works with supplier data stored in Excel files and performs initial data exploration.
 
-This project processes supplier inventory data using Python and Pandas. The data from multiple suppliers is cleaned, merged, and analyzed to generate insights.
+## What This Notebook Does
+- Mounts Google Drive to access datasets.
+- Loads supplier data from Excel files (`supplier_data_1.xlsx` and `supplier_data_2.xlsx`).
+- Uses Pandas for data preprocessing and cleaning.
+- Displays dataset details for further analysis.
 
 ## Features
-
-- Load inventory data from multiple Excel files.
-- Handle missing values and inspect dataset structure.
-- Merge datasets into a single CSV file.
-- Perform exploratory data analysis (EDA) on numerical and categorical data.
-- Rename columns for better readability.
+- Data loading and validation.
+- Data preprocessing and cleaning.
+- Initial exploratory data analysis (EDA).
 
 ## Installation
+To use this notebook, follow these steps:
 
-Ensure you have Python installed along with the required dependencies.
-
-```bash
-pip install pandas openpyxl
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/your-repo-name.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd your-repo-name
+   ```
+3. Create a virtual environment (optional but recommended):
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+4. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+5. Launch Jupyter Notebook:
+   ```sh
+   jupyter notebook
+   ```
 
 ## Usage
+1. Open the Jupyter Notebook (`Task_1 (1).ipynb`).
+2. Run the cells step by step.
+3. Ensure Google Drive is mounted correctly.
+4. Verify the dataset paths before running data processing steps.
 
-### Step 1: Load Supplier Data
+## Data
+- The notebook uses supplier data stored in Excel files.
+- Ensure the dataset files (`supplier_data_1.xlsx` and `supplier_data_2.xlsx`) are available in the correct location.
 
-```python
-import pandas as pd
-supplier1 = pd.read_excel('supplier_data_1.xlsx')
-supplier2 = pd.read_excel('supplier_data_2.xlsx')
+## Dependencies
+The required libraries are listed in `requirements.txt`. Install them using:
+```sh
+pip install -r requirements.txt
 ```
 
-### Step 2: Check for Missing Values
 
-```python
-print(supplier1.isnull().sum())
-print(supplier2.isnull().sum())
-```
 
-### Step 3: Merge Datasets
 
-```python
-inventory_dataset = pd.concat([supplier1, supplier2], ignore_index=True)
-inventory_dataset.to_csv('inventory_dataset.csv', index=False)
-```
-
-### Step 4: Analyze Data
-
-```python
-print(inventory_dataset.describe())
-print(inventory_dataset.describe(include='O'))
-print(inventory_dataset.info())
-```
-
-### Step 5: Rename Columns for Readability
-
-```python
-inventory_dataset.rename(columns={
-    'Nenndicke NNN.NN mm mit Dezimalpunkt': 'Thickness (mm)',
-    'Breite': 'Width (mm)',
-    'Gewicht (kg)': 'Weight (kg)',
-    'NOMINAL_THICKNESS_MM': 'Thickness (mm)',
-    'WIDTH_MM': 'Width (mm)',
-    'MASS_MIN_KG': 'Weight (kg)'
-}, inplace=True)
-```
-
-## Output
-
-- **inventory\_dataset.csv**: The cleaned and merged dataset.
-- Console output with dataset insights and structure.
-
-## License
-
-This project is open-source and free to use.
 
