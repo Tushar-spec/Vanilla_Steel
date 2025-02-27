@@ -1,4 +1,4 @@
-# Project Title
+# Vanilla Steel Inventory 
 
 ## Overview
 This repository contains a Jupyter Notebook named `Task_1 (1).ipynb`. This notebook focuses on data extraction, cleaning, and analysis using Python and Pandas. It primarily works with supplier data stored in Excel files and performs initial data exploration.
