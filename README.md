@@ -1,7 +1,6 @@
 # Vanilla Steel Inventory 
-
-##Task 1 objective - Clean and join the datasets into a single inventory_dataset 
-##The following datasets are raw materials provided by two suppliers (Company A GmbH and Company B Gmbh). 
+Task 1 objective - Clean and join the datasets into a single inventory_dataset 
+The following datasets are raw materials provided by two suppliers (Company A GmbH and Company B Gmbh). 
 
 ## Overview
 This repository contains a Jupyter Notebook named `Task_1 (1).ipynb`. This notebook focuses on data extraction, cleaning, and analysis using Python and Pandas. It primarily works with supplier data stored in Excel files and performs EDA.
